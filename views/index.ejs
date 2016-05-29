@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>登录</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <style type="text/css">
+    	#content{
+    	  position:absolute;
+    	  float: left;
+    	  width: 480px;
+    	  height:280px;
+    	  border:1px solid #aaa;
+    	  -webkit-border-radius: 10px;
+    	  -moz-border-radius: 10px;
+    	  border-radius: 10px;
+    	  top:50%;
+    	  left:50%;
+    	  margin-left: -251px;
+    	  margin-top: -151px;
+    	  background: #fff;
+    	  padding:10px;
+    	  -webkit-box-shadow:5px 5px 5px #292929;
+    	  -moz-box-shadow:5px 5px 5px #292929;
+    	  box-shadow:5px 5px 5px #292929;
+    	}
+
+    </style>
+  </head>
+  <body>
+  	<script>
+	    <% if(err!=""){ %>
+	       	alert("Nickname has existed!");
+	    <% } %>
+    </script>
+    <div id='content'>
+    	<form class="form-horizontal" action='/users' method='get' style="margin-top:90px">
+    	  <div class="control-group">
+    	    <label class="control-label" for="inputEmail">Nickname</label>
+    	    <div class="controls">
+    	      <input type="text" id="inputNickname" placeholder="Nickname" name='name'>
+    	    </div>
+    	  </div>
+    	  <div class="control-group">
+    	    <div class="controls">
+    	      <button type="submit" class="btn">Sign in</button>
+    	      <button type="cancle" class="btn">Cancle</button>
+    	    </div>
+    	  </div>
+    	</form>
+    </div>
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+  </body>
+</html>

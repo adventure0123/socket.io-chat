@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+</head>
+<body>
+ <script type="text/javascript" src="./socket.io.js"> </script>
+ <script>
+ 	var socket=io.connect('http://localhost:8080');
+ 	socket.on('new',function(data){
+ 		console.log(data);
+ 		socket.emit('my other event',{my:'data'});
+ 	});
+ 	socket.on('broadcast',function(data){
+ 		console.log("broadcast:"+data);
+ 	});
+
+ </script>
+</body>
+</html>
+
+
